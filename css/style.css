@@ -728,7 +728,7 @@ body::after {
 }
 
 .button.button-white:active {
-  color: #fff;
+  color: #fff !important;
   background-color: #00812A !important;
 }
 
