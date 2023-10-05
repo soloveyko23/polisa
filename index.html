@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20231005090241">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231005093002">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,7 +82,33 @@
 
 				/* Блок з лічильником */
 				.fls-preloader__counter {
-					font-size: 10rem;
+					display: none;
+				}
+
+				.preloader-logo {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					transition: all 0.3s;
+					animation: rotating ease 3s 0.3s infinite;
+				}
+
+				@keyframes rotating {
+					0% {
+						transform: rotate(0deg);
+					}
+
+					25% {
+						transform: rotate(90deg);
+					}
+
+					50% {
+						transform: rotate(180deg);
+					}
+
+					100% {
+						transform: rotate(360deg);
+					}
 				}
 
 				/* Прогресбар */
@@ -93,7 +119,7 @@
 					display: inline-block;
 					transition: width 0.2s ease;
 					height: 0.8rem;
-					background-color: #7A956B;
+					background: linear-gradient(180deg, #E7FFEE 0%, #EBEDFF 35.94%, #E6FFE5 68.75%, #FFF 100%);
 				}
 			</style>
 			<!-- Скріпт прелоадера -->
@@ -1436,8 +1462,14 @@
 				const preloaderTemplate = `
         <div class="fls-preloader">
           <div class="fls-preloader__body">
-            <div class="fls-preloader__counter">0%</div>
-            <div class="fls-preloader__line"><span></span></div>
+            <div class="preloader-logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="119" height="118" viewBox="0 0 119 118" fill="none">
+<path d="M0 27.6927C0 12.3984 12.4948 0 27.9078 0C43.3211 0 55.8158 12.3984 55.8158 27.6927V55.3852H27.9078C12.4948 55.3852 0 42.9869 0 27.6927Z" fill="#00812A"/>
+<path d="M0 89.7243C0 105.019 12.4948 117.417 27.9078 117.417C43.3211 117.417 55.8158 105.019 55.8158 89.7243V62.0317H27.9078C12.4948 62.0317 0 74.43 0 89.7243Z" fill="#00812A"/>
+<path d="M118.329 27.6927C118.329 12.3984 105.834 0 90.4213 0C75.0079 0 62.5132 12.3984 62.5132 27.6927V55.3852H90.4213C105.834 55.3852 118.329 42.9869 118.329 27.6927Z" fill="#00812A"/>
+<path d="M118.329 89.7243C118.329 105.019 105.834 117.417 90.4213 117.417C75.0079 117.417 62.5132 105.019 62.5132 89.7243V62.0317H90.4213C105.834 62.0317 118.329 74.43 118.329 89.7243Z" fill="#00812A"/>
+</svg>
+            </div>
           </div>
         </div>`;
 				document.querySelector('html').insertAdjacentHTML("beforeend", preloaderTemplate);
@@ -1492,7 +1524,7 @@
 		}
 		preloader();
 	</script>
-	<script src="js/app.min.js?_v=20231005090241"></script>
+	<script src="js/app.min.js?_v=20231005093002"></script>
 </body>
 
 </html>
