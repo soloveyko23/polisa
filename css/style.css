@@ -729,7 +729,7 @@ body::after {
 
 .button.button-white:active {
   color: #fff;
-  background-color: #00812A;
+  background-color: #00812A !important;
 }
 
 .button.button-green {
@@ -762,7 +762,7 @@ body::after {
 
 .button.button-green:active {
   border-color: #00812A;
-  background-color: #FFF;
+  background-color: #FFF !important;
   color: #000;
   -webkit-box-shadow: 0px 4px 10px 0px rgba(81, 90, 100, 0.4);
           box-shadow: 0px 4px 10px 0px rgba(81, 90, 100, 0.4);
@@ -1753,14 +1753,14 @@ h5.h5 {
 
 .reviews .review__content {
   margin-bottom: 30px;
-  max-height: 145px;
+  max-height: 150px;
   overflow: auto;
   /* Track */
   /* Handle */
 }
 
 .reviews .review__content::-webkit-scrollbar {
-  width: 4px;
+  width: 2px;
 }
 
 .reviews .review__content::-webkit-scrollbar-track {
