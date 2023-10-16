@@ -2095,6 +2095,7 @@ p + p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 75px !important;
 }
 
 .slider-pagination-1.swiper-pagination-bullets-dynamic {
@@ -3017,6 +3018,7 @@ ul.list-icon li::before {
   position: absolute;
   top: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .hero-page__bg img {
@@ -3245,10 +3247,43 @@ ul.list-icon li::before {
 
 .hero-page__title {
   max-width: 75%;
+  opacity: 0;
+  -webkit-transform: translateX(-150px);
+      -ms-transform: translateX(-150px);
+          transform: translateX(-150px);
+}
+
+.loaded .hero-page__title {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease 0.6s, -webkit-transform 0.3s linear 0.7s;
+  transition: opacity 0.5s ease 0.6s, -webkit-transform 0.3s linear 0.7s;
+  transition: transform 0.3s linear 0.7s, opacity 0.5s ease 0.6s;
+  transition: transform 0.3s linear 0.7s, opacity 0.5s ease 0.6s, -webkit-transform 0.3s linear 0.7s;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .hero-page__title.h1 {
   color: #fff;
+}
+
+.hero-page__form {
+  opacity: 0;
+  -webkit-transform: translateY(150px);
+      -ms-transform: translateY(150px);
+          transform: translateY(150px);
+}
+
+.loaded .hero-page__form {
+  opacity: 1;
+  -webkit-transition: opacity 0.7s ease 0.6s, -webkit-transform 0.35s linear 0.7s;
+  transition: opacity 0.7s ease 0.6s, -webkit-transform 0.35s linear 0.7s;
+  transition: transform 0.35s linear 0.7s, opacity 0.7s ease 0.6s;
+  transition: transform 0.35s linear 0.7s, opacity 0.7s ease 0.6s, -webkit-transform 0.35s linear 0.7s;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .hero-page__form.form-calculate.form-calculate-travel .form__body {
